@@ -1,0 +1,19 @@
+{
+  "name": "konstochpyssel",
+  "version": "1.0.0",
+  "description": "Anette och Carinas hemsida för bilder på pyssel och konst.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erumaro/konstochpyssel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erumaro/konstochpyssel/issues"
+  },
+  "homepage": "https://github.com/erumaro/konstochpyssel#readme"
+}
