@@ -4,6 +4,9 @@
   "description": "Anette och Carinas hemsida för bilder på pyssel och konst.",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --inline --hot --progress --colors",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/erumaro/konstochpyssel/issues"
   },
-  "homepage": "https://github.com/erumaro/konstochpyssel#readme"
+  "homepage": "https://github.com/erumaro/konstochpyssel#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  }
 }

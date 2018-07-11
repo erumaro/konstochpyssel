@@ -1,0 +1,107 @@
+body{
+    background: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #262626;
+}
+
+h1, h2{
+    font-family: 'IM Fell DW Pica', serif;
+    font-style: italic;
+    font-weight: 400;
+    
+    a{
+        text-decoration: none;
+        color: #262626;
+    }
+}
+
+h1{
+    margin: 0;
+    padding: .67em 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.site-header{
+    background: #fff;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.site-branding{
+    padding: 0 1em;
+}
+
+.entry-header, .entry-content p{
+    padding: 0 1em;
+}
+
+.seperate{
+    width: 60%;
+    margin: 3vh auto;
+}
+
+.entry-content, .entry-footer{
+    background: #fff;
+    border-left: 2px solid #f3f3f3;
+    border-right: 2px solid #f3f3f3;
+}
+
+.entry-footer{
+    background: #007bff;
+    border-bottom: 2px solid #f3f3f3;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.share-buttons{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    li {
+        padding: 10px 20px;
+    }
+    a, i{
+       color: #fff;
+       text-decoration: none;
+    }
+    
+    a:hover{
+        text-decoration: underline;
+        text-decoration-style: dotted;
+    }
+}
+
+.site-footer{
+    background: #fff;
+    border-top: 2px solid #f3f3f3;
+    
+    margin-top: 20px;
+    
+    a, i{
+       color: #262626;
+       text-decoration: none;
+    }
+    
+    .footer-content{
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.backtotop{
+    font-size: 2.5rem;
+}
+
+@media screen and (min-width: 37.5em) {
+    .site-branding, .entry, .footer-content{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
