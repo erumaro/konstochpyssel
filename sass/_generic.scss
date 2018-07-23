@@ -1,3 +1,9 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body{
     background: #fafafa;
     font-family: 'Roboto', sans-serif;
@@ -43,6 +49,78 @@ img{
     width: 60%;
     margin: 3vh auto;
 }
+
+// Gallery
+.intro{
+    width: 100%;
+    height: 35vh;
+    background-image: url(../images/intro_brushes.jpg);
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #f2f2f2;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.95);
+}
+
+.gallery-grid{
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+}
+
+.gallery-item{
+    position: relative;
+    
+    &:hover img{
+        opacity: 0.3;
+    }
+    
+    &:hover a h3{
+        opacity: 1;
+    }
+    
+    a h3{
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 16px 32px;
+        margin: 0;
+    }
+    
+    img{
+        opacity: 1;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+}
+
+.gallery-grid > * {
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@supports (display: grid) {
+  .gallery-grid > * {
+    margin: 0;
+  }
+}
+
+// Blog
 
 .entry-content, .entry-footer{
     background: #fff;

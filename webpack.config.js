@@ -16,6 +16,18 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(gif|png|jp(e*)g|svg)$/,
+                use: 'url-loader'
+            },
+            {
+                test: /\.(gif|png|jp(e*)g|svg)$/,
+                loader: 'image-webpack-loader',
+                // Specify enforce: 'pre' to apply the loader
+                // before url-loader/svg-url-loader
+                // and not duplicate it in rules with them
+                enforce: 'pre'
             }
         ]
     },
