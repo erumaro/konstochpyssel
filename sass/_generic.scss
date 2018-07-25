@@ -39,6 +39,7 @@ img{
 .site-header{
     background: #fff;
     border-bottom: 2px solid #f3f3f3;
+    padding-bottom: .67em;
 }
 
 .site-branding{
@@ -50,6 +51,7 @@ img{
     padding: 0;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     
@@ -59,10 +61,13 @@ img{
         margin: 0;
         display: flex;
         justify-content: space-around;
-        width: 70%;
+        width: 100%;
+        flex-wrap: wrap;
         
         li a{
+            display: block;
             text-decoration: none;
+            padding: 12px;
             
             &.active, &:hover{
                 font-weight: 700;
@@ -249,8 +254,20 @@ img{
 }
 
 @media screen and (min-width: 37.5em) {
+    .site-header{
+        padding-bottom: 0;
+    }
+    
     .site-branding, .entry, .footer-content{
         max-width: 900px;
         margin: 0 auto;
+    }
+    
+    .main-navigation{
+        flex-direction: row;
+        
+        ul{
+            width: 70%;
+        }
     }
 }
