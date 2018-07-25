@@ -45,6 +45,20 @@ img{
     padding: 0 1em;
 }
 
+.main-navigation{
+    max-width: 940px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 .entry-header, .entry-content p{
     padding: 0 1em;
 }
@@ -75,7 +89,7 @@ img{
 
 .featured-filter{
     max-width: 940px;
-    margin: 0 auto;
+    margin: 10px auto;
     
     ul{
         display: flex;
@@ -86,7 +100,7 @@ img{
         list-style: none;
         margin: 0;
         padding: 0;
-        border-top: 1px solid #eee;
+        border-top: 2px solid #eee;
 
         li a{
             display: block;
