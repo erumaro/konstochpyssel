@@ -150,34 +150,34 @@ img{
 .gallery-item{
     position: relative;
     
-    &:hover img{
-        opacity: 0.3;
-    }
-    
-    &:hover a h3{
+    &:hover .gallery-overlay{
         opacity: 1;
     }
     
-    a h3{
-        transition: .5s ease;
-        opacity: 0;
+    .gallery-overlay{
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-        
-        background-color: #4CAF50;
-        color: #fff;
-        padding: 16px 32px;
-        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h3{
+        a{
+            text-decoration: none;
+            color: #262626;
+        }
     }
     
     img{
-        opacity: 1;
-        transition: .5s ease;
-        backface-visibility: hidden;
         object-fit: cover;
         -o-object-fit: cover;
         height: 200px;
