@@ -1,0 +1,22 @@
+.site-footer{
+    background: #fff;
+    border-top: 2px solid #f3f3f3;
+    
+    margin-top: 20px;
+    
+    a, i{
+       color: $verydarkgrey;
+       text-decoration: none;
+    }
+    
+    .footer-content{
+        @include center-content(0px);
+        padding: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.backtotop{
+    @include font-size(2.5)
+}

@@ -1,0 +1,31 @@
+.category-header{
+    height: 15vh;
+    background-image: url(../images/intro_brushes.jpg);
+}
+
+.category{
+    .entry{
+        display: flex;
+        @include center-content(10px);
+    }
+    
+    .entry-featured{
+        width: 40%;
+        
+        img{
+        height: 240px;
+        object-fit: cover;
+        -o-object-fit: cover;
+        object-position: center;
+        }
+    }
+    
+    .entry-excerpt{
+        width: 60%;
+        
+        .entry-header{
+            height: 50%;
+            background-color: $salmon;
+        }
+    }
+}

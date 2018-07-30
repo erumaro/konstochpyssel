@@ -1,0 +1,32 @@
+// Site Header
+.site-header{
+    background-color: #fff;
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: .67em;
+    
+    @media screen and (min-width: 37.5em) {
+        padding-bottom: 0;
+    }
+}
+
+// Menu Header
+.main-navigation{
+    @include center-content(0);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    ul{
+        @include justify-content(space-around);
+        
+        @media screen and (min-width: 37.5em) {
+            width: 70%;
+        }
+    }
+    
+    @media screen and (min-width: 37.5em) {
+        flex-direction: row;
+    }
+}

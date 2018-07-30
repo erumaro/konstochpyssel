@@ -1,0 +1,13 @@
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+@mixin center-content($marginTopBottom: 0) {
+    max-width: 940px;
+    margin: $marginTopBottom auto;
+}
+
+@mixin justify-content($value: flex-start) {
+    justify-content: $value;
+}

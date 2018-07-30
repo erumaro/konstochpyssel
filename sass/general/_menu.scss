@@ -1,0 +1,16 @@
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    li a{
+        display: block;
+        text-decoration: none;
+        color: $verydarkgrey;
+        padding: 12px;
+    }
+}

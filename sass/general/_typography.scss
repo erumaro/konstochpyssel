@@ -1,0 +1,50 @@
+// Basic text
+body, p{
+    font-family: $fontsans;
+    @include font-size(1);
+    color: $verydarkgrey;
+}
+
+// Headings
+h1, h2{
+    font-family: $fontserif;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    padding: .67em 0;
+    
+    a{
+        text-decoration: none;
+        color: $verydarkgrey;
+    }
+}
+
+h3, h4, h5, h6{
+    font-family: $fontsans;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: .67em 0;
+    
+    a{
+        text-decoration: none;
+        color: $verydarkgrey;
+    }
+}
+
+h2{
+    text-align: center;
+}
+
+// Links
+a{
+    color: $salmon;
+    
+    &:hover{
+        
+    }
+    
+    &:visited{
+        
+    }
+}
