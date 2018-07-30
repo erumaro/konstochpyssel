@@ -1,0 +1,17 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a[type="button"] {
+	border: 1px solid;
+	border-color: $verydarkgrey;
+	border-radius: 3px;
+	background: $salmon;
+	color: $mostlywhite;
+	@include font-size(0.85);
+	line-height: 1;
+	padding: .6em 1em .4em;
+    text-decoration: none;
+    display: block;
+    width: 80px;
+}
