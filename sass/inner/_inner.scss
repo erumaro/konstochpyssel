@@ -11,6 +11,7 @@
         text-align: center;
         color: $mostlywhite;
         text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.95);
+        @include center-content(0px)
     }
 }
 
@@ -40,3 +41,4 @@
 @import "index";
 @import "category";
 @import "single-post";
+@import "page";
