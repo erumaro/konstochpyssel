@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konst och pyssel - Working title</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400i|Roboto:400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!-- Compressed Custom CSS -->
-    <link rel="stylesheet" href="dist/style.css">
-</head>
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package konstochpyssel
+ */
 
-<body>
-    <div id="page" class="hfeed site">
-        <header id="masthead" class="site-header" role="banner">
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-                <h1 class="site-title"><a href="index.html" rel="home">Konst <span>&</span> Pyssel</a></h1>
-                <ul id="primary-menu" class="menu">
-                    <li class="menu-item"><a class="active" href="index.html">Hem</a></li>
-                    <li class="menu-item"><a href="category.html">Kategori 1</a></li>
-                    <li class="menu-item"><a href="category.html">Kategori 2</a></li>
-                    <li class="menu-item"><a href="category.html">Kategori 3</a></li>
-                    <li class="menu-item"><a href="category.html">Kategori 4</a></li>
-                    <li class="menu-item"><a href="about.html">Om oss</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
+get_header();
+?>
+        <main id="main" class="site-main">
             <section class="hero intro">
                 <h2>Det här en introduktion</h2>
                 <p>Här ska en introducerande text stå som får användaren/besökaren veta vart dom kommit.</p>
@@ -140,15 +128,5 @@
                 </div>
             </section>
         </main>
-        <footer id="colophon" class="site-footer" role="contentinfo">
-            <div class="footer-content">
-                <a data-scroll href="#masthead" class="backtotop"><i class="fas fa-arrow-alt-circle-up"></i></a>
-                <p class="copyright">2018 &copy; Konst och pyssel</p>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
-    <!-- Bundle for custom js -->
-    <script src="dist/bundle.js"></script>
-</body>
-</html>
+<?php
+get_footer();
