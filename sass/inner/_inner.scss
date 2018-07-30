@@ -19,6 +19,24 @@
     border: 2px solid #f3f3f3;
 }
 
+.entry-header, .entry-content{
+    padding: 0 1em;
+}
+
+.entry-header{
+    background-color: $salmon;
+    color: $mostlywhite;
+    
+    p{
+        color: $mostlywhite;
+    }
+    
+    a{
+        color: $mostlywhite;
+        text-decoration-style: dotted;
+    }
+}
+
 @import "index";
 @import "category";
 @import "single-post";
