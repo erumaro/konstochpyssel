@@ -23,9 +23,23 @@
     .entry-excerpt{
         width: 60%;
         
+        .entry-header, .entry-content{
+            padding: 0 1em;
+        }
+        
         .entry-header{
             height: 50%;
             background-color: $salmon;
+            color: $mostlywhite;
+            
+            p{
+                color: $mostlywhite;
+            }
+            
+            a{
+                color: $mostlywhite;
+                text-decoration-style: dotted;
+            }
         }
     }
 }
