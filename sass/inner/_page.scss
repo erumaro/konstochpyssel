@@ -12,12 +12,8 @@
 }
 
 .page .page{
-    .entry-header{
-        p{
-            @include font-size(1.2);
-            text-align: center;
-            padding-bottom: .67em;
-        }
+    .entry-content{
+        padding-top: .67em;
     }
     
     .entry-featured{
