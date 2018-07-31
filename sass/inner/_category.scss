@@ -1,10 +1,10 @@
-.category-header{
+.archive-header{
     height: 15vh;
     background-image: url(../images/intro_brushes.jpg);
 }
 
-.category{
-    .entry{
+.category, .blog{
+    .post{
         display: flex;
         @include center-content(10px);
     }

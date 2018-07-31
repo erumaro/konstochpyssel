@@ -15,6 +15,7 @@ if ( ! function_exists( 'konstochpyssel_setup' ) ) :
 
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'konstochpyssel' ),
+            'menu-2' => esc_html__( 'Filter', 'konstochpyssel' ),
 		) );
 
 		add_theme_support( 'html5', array(
@@ -45,6 +46,14 @@ function konstochpyssel_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'konstochpyssel_scripts' );
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
