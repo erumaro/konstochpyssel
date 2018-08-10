@@ -1,6 +1,6 @@
 <template>
     <div class="gallery-item">
-        <a href="#">
+        <a :href="item.link">
             <div class="gallery-overlay">
                 <h3>{{ item.title.rendered }}</h3>
             </div>
