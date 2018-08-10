@@ -1,3 +1,10 @@
+// SASS -> CSS
 import style from '../sass/style.scss';
 
-var scroll = new SmoothScroll('a[href*="#masthead"]');
+// Vue
+import Vue from 'vue';
+import App from './App.vue';
+
+new Vue({
+    render: h => h(App)
+}).$mount('#app');

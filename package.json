@@ -4,9 +4,9 @@
   "description": "Anette och Carinas hemsida för bilder på pyssel och konst.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --progress --colors",
+    "dev": "webpack-dev-server --mode=development --inline --hot --progress --colors",
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
+    "build": "npm run clean && webpack --mode=production --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/erumaro/konstochpyssel#readme",
   "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-vue": "^2.0.2",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "image-webpack-loader": "^4.3.1",
@@ -29,6 +34,11 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.2.6",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^4.1.1",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"

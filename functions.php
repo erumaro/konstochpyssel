@@ -42,6 +42,7 @@ function konstochpyssel_scripts() {
 	wp_enqueue_style( 'konstochpyssel-style', get_stylesheet_uri() );
 
     wp_enqueue_script( 'smoothscroll', 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js', false, false, true );
+    wp_enqueue_script( 'konstochpyssel-vendor', get_template_directory_uri() . '/dist/vendor.js', false, false, true );
 	wp_enqueue_script( 'konstochpyssel-bundle', get_template_directory_uri() . '/dist/bundle.js', false, false, true );
 }
 add_action( 'wp_enqueue_scripts', 'konstochpyssel_scripts' );
