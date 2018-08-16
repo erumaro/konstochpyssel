@@ -1,21 +1,32 @@
 <template>
     <nav class="featured-filter">
         <ul>
-        <GalleryFilterItem
-        
-        >   
-        </GalleryFilterItem>
+            <li :class="{active:activeFilter === 'all'}" @click="filter('all')">
+                <a>Alla</a>
+            </li>
+            <li :class="{active:activeFilter === 'anette'}" @click="filter('anette')">
+                <a>Anette</a>
+            </li>
+            <li :class="{active:activeFilter === 'carina'}" @click="filter('carina')">
+                <a>Carina</a>
+            </li>
         </ul>
     </nav>
 </template>
 
 <script>
-import GalleryFilterItem from './GalleryFilterItem.vue';
-
 export default {
     name: 'GalleryFilter',
-    components: {
-        GalleryFilterItem
+    props: ['activeFilter'],
+    computed: {
+        filteredItems() {
+            let filter = this.activeFilter;
+        }
+    },
+    methods: {
+        filter(tag) {
+            this.activeFilter = tag;
+        }
     }
 };
 </script>

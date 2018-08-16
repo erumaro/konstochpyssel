@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Senaste</h2>
-        <GalleryFilter />
+        <GalleryFilter :activeFilter="activeFilter" />
         <Gallery :items="items" />
     </div>
 </template>
@@ -18,7 +18,10 @@ export default {
         Gallery
     },
     data() {
-        return { items: [] };
+        return { 
+            items: [],
+            activeFilter: 'all'
+        };
     },
     mounted () {
         axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {

@@ -508,7 +508,7 @@ nav ul {
       font-weight: 700;
       text-decoration: underline;
       text-decoration-style: dotted; }
-    .featured-filter ul li.active-filter a {
+    .featured-filter ul li.active a {
       background: #eee;
       font-weight: 700; }
 
