@@ -11,6 +11,8 @@ import axios from 'axios';
 import GalleryFilter from './components/GalleryFilter.vue';
 import Gallery from './components/Gallery.vue';
     
+const ROOT_URL = `${wpglobals.restURL}wp/v2`;
+    
 export default {
     name: 'App',
     components: {
@@ -27,7 +29,7 @@ export default {
         onChangeActiveFilter(newActiveFilter) {
             this.activeFilter = newActiveFilter;
             if(this.activeFilter === 'anette') {
-                axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+                axios.get(`${ROOT_URL}/posts`, {
                     params: {
                         _embed: 'true',
                         type: 'post',
@@ -38,7 +40,7 @@ export default {
                     this.items = response.data
                 });
             } else if(this.activeFilter === 'carina') {
-                axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+                axios.get(`${ROOT_URL}/posts`, {
                     params: {
                         _embed: 'true',
                         type: 'post',
@@ -49,7 +51,7 @@ export default {
                     this.items = response.data
                 }); 
             } else{
-                axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+                axios.get(`${ROOT_URL}/posts`, {
                     params: {
                         _embed: 'true',
                         type: 'post',
@@ -65,7 +67,7 @@ export default {
         
     },
     mounted () {
-        axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+        axios.get(`${ROOT_URL}/posts`, {
             params: {
                 _embed: 'true',
                 type: 'post',
