@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Senaste</h2>
-        <GalleryFilter :activeFilter="activeFilter" />
+        <GalleryFilter :activeFilter="activeFilter" @changeActiveFilter="onChangeActiveFilter" />
         <Gallery :items="items" />
     </div>
 </template>
@@ -22,6 +22,47 @@ export default {
             items: [],
             activeFilter: 'all'
         };
+    },
+    methods: {
+        onChangeActiveFilter(newActiveFilter) {
+            this.activeFilter = newActiveFilter;
+            if(this.activeFilter === 'anette') {
+                axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+                    params: {
+                        _embed: 'true',
+                        type: 'post',
+                        limit: 9,
+                        author: 2
+                    },
+                }).then(response => {
+                    this.items = response.data
+                });
+            } else if(this.activeFilter === 'carina') {
+                axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+                    params: {
+                        _embed: 'true',
+                        type: 'post',
+                        limit: 9,
+                        author: 3
+                    },
+                }).then(response => {
+                    this.items = response.data
+                }); 
+            } else{
+                axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {
+                    params: {
+                        _embed: 'true',
+                        type: 'post',
+                        limit: 9
+                    },
+                }).then(response => {
+                    this.items = response.data
+                });
+            }
+        }
+    },
+    computed: {
+        
     },
     mounted () {
         axios.get('http://localhost/wordpress/wp-json/wp/v2/posts', {

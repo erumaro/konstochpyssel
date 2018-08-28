@@ -1,13 +1,13 @@
 <template>
     <nav class="featured-filter">
         <ul>
-            <li :class="{active:activeFilter === 'all'}" @click="filter('all')">
+            <li :class="{active:activeFilter === 'all'}" @click="changeFilter('all')">
                 <a>Alla</a>
             </li>
-            <li :class="{active:activeFilter === 'anette'}" @click="filter('anette')">
+            <li :class="{active:activeFilter === 'anette'}" @click="changeFilter('anette')">
                 <a>Anette</a>
             </li>
-            <li :class="{active:activeFilter === 'carina'}" @click="filter('carina')">
+            <li :class="{active:activeFilter === 'carina'}" @click="changeFilter('carina')">
                 <a>Carina</a>
             </li>
         </ul>
@@ -18,14 +18,9 @@
 export default {
     name: 'GalleryFilter',
     props: ['activeFilter'],
-    computed: {
-        filteredItems() {
-            let filter = this.activeFilter;
-        }
-    },
     methods: {
-        filter(tag) {
-            this.activeFilter = tag;
+        changeFilter(tag) {
+            this.$emit('changeActiveFilter', tag);
         }
     }
 };

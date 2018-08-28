@@ -1,5 +1,5 @@
 <template>
-    <div class="gallery-item">
+    <div :class="authorSlug">
         <a :href="item.link">
             <div class="gallery-overlay">
                 <h3>{{ item.title.rendered }}</h3>
@@ -14,6 +14,10 @@ export default {
     name: 'GalleryItem',
     props: ['item'],
     computed: {
+        authorSlug() {
+            let author = `gallery-item author-${this.item._embedded.author[0].slug}`;
+            return author;
+        },
         thumbnailUrl() {
             return this.item._embedded["wp:featuredmedia"][0].source_url
         },
